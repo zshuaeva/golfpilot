@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './scorecard.css';
 
 const Scorecard = () => {
   const [courseName, setCourseName] = useState('');
@@ -39,25 +40,24 @@ const Scorecard = () => {
   };
 
   return (
-    <>
     <div>
-      <h1>Golf Scorecard</h1>
-      <label htmlFor="courseName">Course Name:</label>
+      <h1 className='title'>Golf Scorecard</h1>
+      <label htmlFor="courseName" className='course-name'>Course Name:</label>
       <input
         type="text"
         id="courseName"
         value={courseName}
         onChange={(e) => setCourseName(e.target.value)}
       />
-      <table>
-        <thead>
+      <table className='tables-container'>
+        <thead className='tables-head'>
           <tr>
             <th>Hole</th>
             <th>Par</th>
             <th>Score</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody className='tables-body'>
           {holeDetails.map((hole, index) => (
             <tr key={index}>
               <td>{hole.holeNumber}</td>
@@ -80,14 +80,23 @@ const Scorecard = () => {
         </tbody>
       </table>
       <button onClick={addNewLine}>Next Hole</button>
-      <div>
-        <p>Course Name: {courseName}</p>
-        <p>Par: {calculateTotalPar()} </p>
-        <p>Total Score: {calculateTotalScore()}</p>
-        <p>Live Score: {calculateTotalScore() - calculateTotalPar()}</p>
-      </div>
+      <div className="totals">
+  <p>Course Name: {courseName}</p>
+  <p>Course Par: {calculateTotalPar()} </p>
+  <p>Total Score: {calculateTotalScore()}</p>
+  {(() => {
+    const liveScore = calculateTotalScore() - calculateTotalPar();
+    if (liveScore === 0) {
+      return <p>Live Score: You are shooting Par</p>;
+    } else if (liveScore < 0) {
+      return <p>Live Score: You are {Math.abs(liveScore)}-under-par</p>;
+    } else {
+      return <p>Live Score: You are {liveScore}-over-par</p>;
+    }
+  })()}
+</div>
+
     </div>
-    </>
   );
 };
 

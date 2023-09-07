@@ -4,10 +4,12 @@ import Scorecard from './scorecard/scorecard';
 
 function App() {
   return (
-    <>
-    <Nav />
-    <Scorecard />
-    </>
+    <div className='app'>
+      <Nav />
+      <div className="scorecardcomponent">
+      <Scorecard />
+      </div>
+    </div>
   );
 }
 

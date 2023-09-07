@@ -1,5 +1,5 @@
-.App{
-  background-color: bisque;
+.app{
+  background-color: rgb(241, 223, 201);
 }
 
 .menu {
@@ -16,4 +16,10 @@
   background-color: white;
   border-radius: 15px;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.scorecardcomponent {
+ margin-left: 10px;
+ border-top: 2px;
+ margin-right: 10px;
 }
