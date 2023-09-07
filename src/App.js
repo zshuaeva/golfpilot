@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import scorecard from './scorecard/scorecard';
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
           Learn React
         </a>
       </header>
+      <div>
+      <scorecard />
+      </div>
     </div>
   );
 }
