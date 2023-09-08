@@ -1,13 +1,13 @@
 import './App.css';
-import Nav from './nav/nav';
 import Scorecard from './scorecard/scorecard';
 
 function App() {
   return (
-    <div className='app'>
-      <Nav />
-      <div className="scorecardcomponent">
-      <Scorecard />
+    <div className='appContainer'>
+      <div className='app'>
+        <div className="scorecardcomponent">
+        <Scorecard />
+        </div>
       </div>
     </div>
   );

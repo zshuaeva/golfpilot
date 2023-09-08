@@ -15,7 +15,8 @@
   border: 1px solid black;
   margin: 20px 0;
   border-collapse: collapse;
-  width: 100%;
+
+
 }
 
 .tables-head th,
@@ -23,6 +24,14 @@
   border: 1px solid black;
   padding: 5px;
   text-align: center;
+}
+.parinputfield{
+  width: 80%;
+  color: navy;
+}
+.scoreinputfield{
+  width: 80%;
+  color: maroon;
 }
 
 .tables-head th {

@@ -63,6 +63,7 @@ const Scorecard = () => {
               <td>{hole.holeNumber}</td>
               <td>
                 <input
+                 className="parinputfield"
                   type="number"
                   value={hole.par}
                   onChange={(e) => handleParChange(e, index)}
@@ -70,6 +71,7 @@ const Scorecard = () => {
               </td>
               <td>
                 <input
+                  className="scoreinputfield"
                   type="number"
                   value={hole.score}
                   onChange={(e) => handleScoreChange(e, index)}
