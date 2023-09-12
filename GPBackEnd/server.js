@@ -10,9 +10,8 @@ db.on('error', (error) => console.error(error))
 db.once('open', () => console.log('Connected to Database'))
 
 app.use(express.json())
-app.use('golfclubs')
-'localhost:3000/golfclubs/asdasd'
 
 const golfclubsRouter = require('./routes/golfclubs')
+app.use('/golfclubs', golfclubsRouter)
 
 app.listen(3000, () => console.log('Server Started'))
