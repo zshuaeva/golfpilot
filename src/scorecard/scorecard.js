@@ -46,7 +46,7 @@ const Scorecard = () => {
     updatedHoleDetails[index].score = parseInt(e.target.value);
     setHoleDetails(updatedHoleDetails);
 
-    // Save updated holeDetails to localStorage
+
     localStorage.setItem('holeDetails', JSON.stringify(updatedHoleDetails));
   };
 
@@ -63,7 +63,7 @@ const Scorecard = () => {
 
   return (
     <div>
-      <h1 className='title'>Golf Scorecard</h1>
+      {/* <h1 className='title'>Golf Scorecard</h1> */}
       <label htmlFor="courseName" className='course-name'>Course Name:</label>
       <input
         type="text"
