@@ -1,38 +1,32 @@
-import * as React from 'react';
-import Divider from '@mui/material/Divider';
-import Chip from '@mui/material/Chip';
-import Box from '@mui/material/Box';
-import Tabs from '@mui/material/Tabs';
-import Tab from '@mui/material/Tab';
-
+import React, { useState } from 'react';
 import './App.css';
 import Scorecard from './scorecard/scorecard';
 import ClubGuide from './clubGuide/clubguide';
-
+import TabNav from './nav/nav';
 
 function App() {
+  const [selectedTab, setSelectedTab] = useState(0);
 
-
+  const handleTabChange = (event, selectedComponent) => {
+    setSelectedTab(selectedComponent);
+  };
 
   return (
     <div className='appContainer'>
-
       <div className='app'>
-      <Divider>
-        <Chip label="Scorecard" />
-        </Divider>
-        <div className="scorecardcomponent">
-        <Scorecard />
+        <TabNav value={selectedTab} onChange={handleTabChange} />
+        <div className="tabContent">
+          {selectedTab === 0 && (
+            <div className="scorecardcomponent">
+              <Scorecard />
+            </div>
+          )}
+          {selectedTab === 1 && (
+            <div className="clubguidecomponent">
+              <ClubGuide />
+            </div>
+          )}
         </div>
-
-        <Divider>
-        <Chip label="Club Guide" />
-        </Divider>
-
-        <div className="clubguidecomponent">
-          <ClubGuide />
-        </div>
-
       </div>
     </div>
   );

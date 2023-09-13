@@ -21,7 +21,7 @@ function ClubGuide() {
 
   return (
     <div className="clubguide-container">
-      {/* <h1>Club Guide</h1> */}
+      <h1>Club Guide</h1>
       <select
         onChange={(e) => {
           const selectedClubId = e.target.value;

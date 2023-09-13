@@ -63,7 +63,7 @@ const Scorecard = () => {
 
   return (
     <div>
-      {/* <h1 className='title'>Golf Scorecard</h1> */}
+      <h1 className='title'>Golf Scorecard</h1>
       <label htmlFor="courseName" className='course-name'>Course Name:</label>
       <input
         type="text"
