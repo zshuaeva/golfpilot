@@ -1,14 +1,18 @@
+import React from 'react';
+import Box from '@mui/material/Box';
+import Tabs from '@mui/material/Tabs';
+import Tab from '@mui/material/Tab';
 
-function Nav() {
-return (
-  <>
-    <div className='menu'>
-      <button>Front 9</button>
-      <button>Back 9</button>
-      <button>Full 18</button>
-    </div>
-  </>
-)
+function TabNav(props) {
+  return (
+    <Box sx={{ width: '100%', bgcolor: 'lightgrey' }}>
+      <Tabs value={props.value} onChange={props.onChange} centered>
+        <Tab label="Scorecard" />
+        <Tab label="Club Guide" />
+        <Tab label="Coming Soon" disabled />
+      </Tabs>
+    </Box>
+  );
 }
 
-export default Nav;
+export default TabNav;
