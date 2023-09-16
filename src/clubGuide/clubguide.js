@@ -11,7 +11,7 @@ function ClubGuide() {
   const tempClubs = [
     {
       name: 'All',
-      distance: '60 yds - 200 yds',
+      distance: '60 yds - 220 yds',
       position: All
     },
     {
