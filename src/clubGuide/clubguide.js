@@ -109,7 +109,7 @@ function ClubGuide() {
   // useEffect(() => {
   //   fetchGolfClubs();
   // }, []);
-  const [selectedClub, setSelectedClub] = useState({ name: '', distance: '' });
+  const [selectedClub, setSelectedClub] = useState({ name: '', distance: '', position: All });
 
   return (
     <div className="clubguide-container">
