@@ -118,7 +118,7 @@ function ClubGuide() {
         onChange={(e) => {
           const selectedClubName = e.target.value;
           const selectedClubDetails = tempClubs.find((club) => club.name === selectedClubName);
-          setSelectedClub(selectedClubDetails || { name: '', distance: '' });
+          setSelectedClub(selectedClubDetails || { name: '', distance: '', position: All });
         }}
       >
         <option value="">Select a club</option>
@@ -133,10 +133,14 @@ function ClubGuide() {
         <p>Club Name: {selectedClub.name}</p>
         <p>Median Distance: {selectedClub.distance}</p>
         <p>Ball Placement:</p>
-        <img src={selectedClub.position} alt="Foot Position" className="BallPlacementImg" />
+        {selectedClub.position === All ? (
+          <img src={All} alt="Placement" className="BallPlacementImg" />
+        ) : (
+          <img src={selectedClub.position} alt="Foot Position" className="BallPlacementImg" />
+        )}
       </div>
     </div>
   );
-}
+};
 
 export default ClubGuide;
