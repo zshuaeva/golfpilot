@@ -7,5 +7,6 @@
 
 .BallPlacementImg {
   margin-left: 20px;
-  max-width: 80%
+  display: flexbox;
+  max-width: 75vmin;
 }
